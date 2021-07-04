@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white : hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button,
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    /* font-family: 'Big Shoulders Display', cursive; */
+    background-color: var(--very-light-gray);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row{
+    max-width: 1140px;
+    display: flex;
+}
+
+.col {
+    display: flex;
+}
+
+.item{
+    padding: 10%;
+}
+
+.item h1{
+    margin: 3rem 0;
+    color: var(--very-light-gray);
+}
+
+.item p{
+    margin-bottom: 10rem;
+    color: var(--transparent-white);
+}
+
+.item button{
+    transition: all 0.4s ease-in-out;
+    border: 1px solid;
+    padding: 0.9rem 1.75rem;
+    border-radius: 10rem;
+}
+
+.item-1 {
+    border-radius: 10px 0 0 10px;
+    background-color: var(--bright-orange);
+}
+
+.item-1 button{
+    font-size: 1rem;
+    color: var(--bright-orange);
+}
+.item-1 button:hover {
+    border: 0.1px solid white;
+    color: white;
+    background-color: var(--bright-orange);
+    cursor: pointer;
+    padding: 0.9rem 1.75rem;
+    border-radius: 10rem;
+}
+
+
+.item-2{
+    background-color: var(--dark-cyan);
+}
+
+.item-2 button{
+    font-size: 1rem;
+    color: var(--dark-cyan);
+}
+
+.item-2 button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--dark-cyan);
+    cursor: pointer;
+}
+
+.item-3{
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--very-dark-cyan);
+}
+
+.item-3 button{
+    
+    font-size: 1rem;
+    color: var(--very-dark-cyan);
+}
+
+.item-3 button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .container{
+        padding: 20px 0;
+        height: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        width: 88%;
+    }
+
+    .item p{
+        margin-bottom: 5rem;
+        color: var(--transparent-white);
+    }
+
+    .item-1 {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .item-3 {
+        border-radius: 0 0 10px 10px;
+    }
+}
